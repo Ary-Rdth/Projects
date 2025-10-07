@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Password Strength Checker</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+ <h1>Password Strength Checker</h1>
+ <input type="password" id="password" placeholder="Please enter password to test security level" oninput="checkPasswordStrength()">
+ <div id="password-strength">
+  <div class="quality-level" data-level="1">Too Weak</div>
+  <div class="quality-level" data-level="2">Weak</div>
+  <div class="quality-level" data-level="3">Medium</div>
+  <div class="quality-level" data-level="4">Strong</div>
+  <div class="quality-level" data-level="5">Very Strong</div>
+ </div>
+ </div>
+ <script src="script.js"></script>
+</body>
+</html>
+
+
+  

@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family:'Segoe UI',Tahoma, Geneva, Verdaba, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.container
+{
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width:100%;
+    max-width: 450px;
+    text-align: center;
+}
+h1
+{
+ color:#333;
+ margin-bottom: 30px;
+ font-size: 28px;
+ font-weight:600;
+}
+#password
+{
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+#password:focus
+{
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+#password-strength
+{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+}
+.quality-level 
+{
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0.3;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+.quality-level.active
+{
+    opacity: 1;
+    transform: scale(1);
+}
+/* Colors depict the variation in strength level */
+.quality-level[data-level="1"] { background-color: #ff4757; color: white; }
+.quality-level[data-level="2"] { background-color: #ffa502; color: white; }
+.quality-level[data-level="3"] { background-color: #ffd32a; color: #333; }
+.quality-level[data-level="4"] { background-color: #2ed573; color: white; }
+.quality-level[data-level="5"] { background-color: #1e90ff; color: white; }
+
+/* Active state enhancements */
+.quality-level[data-level="1"].active { box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4); }
+.quality-level[data-level="2"].active { box-shadow: 0 4px 15px rgba(255, 165, 2, 0.4); }
+.quality-level[data-level="3"].active { box-shadow: 0 4px 15px rgba(255, 211, 42, 0.4); }
+.quality-level[data-level="4"].active { box-shadow: 0 4px 15px rgba(46, 213, 115, 0.4); }
+.quality-level[data-level="5"].active { box-shadow: 0 4px 15px rgba(30, 144, 255, 0.4); }
